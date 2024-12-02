@@ -1,0 +1,462 @@
+/* General Header Styles */
+.header {
+    color: rgb(10, 1, 1);
+    overflow-y: auto;
+    width: 300px;
+    position: fixed;
+    padding: 0 15px;
+    
+}
+
+.header .profile-img img {
+    display: block;
+    width: 120px;
+    margin: 15px auto;
+    border: 8px solid;
+}
+
+.header .logo h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+    color: white;
+}
+
+/* Reset some default styles */
+* {
+    color: black;
+    background-color: white;
+}
+
+.navmenu {
+    padding: 0;
+    z-index: 9997;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.navmenu ul {
+    list-style: none;
+    padding: 0 0 20px 0;
+    margin: 0;
+}
+
+.navmenu .nav-link:hover {
+    color: var(--tertiary-color);
+}
+
+.navmenu .nav-link:active {
+    color: var(--tertiary-color);
+}
+
+/* Hero Section Styles */
+.hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Root Color Variables */
+:root {
+    --primary-color: #0022d5;
+    --secondary-color: #ffffff;
+    --tertiary-color: #0b71ca;
+    --ascent-color: #4b0893;
+}
+
+/* Social Links */
+.header .social-links {
+    margin: 0 0 20px 0;
+}
+
+.header .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--primary-color), transparent 90%); /* Fixed the background property */
+    color: var(--secondary-color);
+    margin: 0 2px;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.header .social-links a:hover {
+    color: var(--ascent-color); /* Set a valid color for hover */
+    background: var(--primary-color); /* Use a defined color for hover */
+}
+
+.header .name {
+    background-color: yellowgreen;
+}
+
+/* Home Section */
+#content{
+    margin-left: 350px;
+    padding: 20px;
+    display: flex; /* Use flex for centering */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Resume Container Styles */
+.resume-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color:yellowgreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #444;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+}
+
+.resume-section {
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.expand-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.expand-btn:hover {
+    background-color: #45a049;
+}
+
+/* Hidden Content */
+.hidden-content {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Timeline Styles */
+.timeline-list {
+    position: relative;
+    padding: 20px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-left: 3px solid #4caf50;
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    color: #777;
+}
+
+.timeline-item .content {
+    padding-left: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .resume-container {
+        width: 90%;
+    }
+}
+
+/* Modal Overlay Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-overlay.visible {
+    display: block;
+}
+
+.hidden-content.visible {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.progress {
+    height: 20px;
+    margin-bottom: 10px;
+  }
+.progress-bar {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    line-height: 20px; /* Vertically center the text */
+    transition: width 2s ease-in-out;
+  }
+  
+  .progress-bar-striped {
+    background-size: 40px 40px;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  }
+  
+  .progress-bar-animated {
+    animation: progress-bar-stripes 1s linear infinite;
+  }
+  
+  @keyframes progress-bar-stripes {
+    0% { background-position: 40px 0; }
+    100% { background-position: 0 0; }
+  }
+
+  #portfolio {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+#portfolio .container {
+    max-width: 1200px;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+#services {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+#services .container {
+    max-width: 1200px;
+}
+
+.service-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+#contact-info {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+#contact-info .container {
+    max-width: 1200px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h4 {
+    color: #333;
+    font-weight: bold;
+}
+
+ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+ul li i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+#show-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+#show-more-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+#map-location {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        margin-bottom: 30px;
+    }
+}
+
